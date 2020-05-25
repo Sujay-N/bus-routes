@@ -14,7 +14,7 @@ import { Contact } from './Contact';
      }
      
     render() {  
-        console.log(this.props.bookings[0].tripStart)
+        // console.log(this.props.bookings[0].tripStart)
         return (
             <div>
                

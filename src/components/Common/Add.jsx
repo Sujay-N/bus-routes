@@ -17,6 +17,7 @@ import uuid from 'uuid-random';
             dst:"",
             id:0,
             tripStart:"false",
+            key : uuid()
     
         }
     }
@@ -37,7 +38,9 @@ import uuid from 'uuid-random';
         time:this.state.time,
         src:this.state.src,
         dst:this.state.dst,
+        key:this.state.key,
         tripStart : "true",
+        
     }
     this.props.add(details)
     }
@@ -114,7 +117,7 @@ import uuid from 'uuid-random';
                     <select  name="src" onChange = {this.handleChange} value={this.state.src}>
                      <option> From </option>
                     {this.props.cityNames && this.props.cityNames.map((e) => (
-                        <option key={uuid()} > {e} </option>
+                        <option key={e.key} > {e} </option>
         ))}
                    
                     </select>
@@ -127,7 +130,7 @@ import uuid from 'uuid-random';
                 <select name="dst" onChange = {this.handleChange} value={this.state.dst}>
                 <option> To </option>
                 { this.props.cityNames && this.props.cityNames.map((e) => (
-                    <option  key={uuid()}> {e} </option>
+                    <option  key={e.key}> {e} </option>
                 ))}
                 </select>
                 </form>
