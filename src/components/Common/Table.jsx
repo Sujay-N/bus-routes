@@ -49,7 +49,7 @@ import  Pagination  from './Pagination';
                             <td> {e.date}</td>
                             <td>{e.time} </td>
                             <td> <button className="badge badge-pill rounded badge-success" onClick = {this.update}> EDIT</button></td>
-                            <td> <button className="badge badge-pill rounded badge-danger" onClick={()=>this.props.del(e.key)}> DELETE</button></td>
+                            <td> <button className="badge badge-pill rounded badge-danger" onClick={()=>this.props.del(e.id)}> DELETE</button></td>
                             </tr>
                         ))}
                        

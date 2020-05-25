@@ -38,7 +38,7 @@ export default (state = initialState, action) => {
     case DELETE_BUS:
                 return {
                     ...state,
-                    bookings: state.bookings.filter((ele) => ele.key !== action.payload)
+                    bookings: state.bookings.filter((ele) => ele.id !== action.payload)
                 }
 
     default:
